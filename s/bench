@@ -1,6 +1,9 @@
 #!/bin/bash
 cd `dirname "$0"`/..
+set -e
 
-for a in apache_builds github_events instruments mesh svg_menu twitter update-center; do
-    python jnd.py testdata/$a.min.json
+mkdir -p results
+for a in apache_builds get_initial_state github_events instruments mesh svg_menu twitter update-center; do
+    echo "benching $a"
+    python jnd.py testdata/$a.min.json > results/$a.csv
 done
