@@ -1,0 +1,6 @@
+#!/bin/bash
+cd `dirname "$0"`/..
+
+for a in apache_builds github_events instruments mesh svg_menu twitter update-center; do
+    python jnd.py testdata/$a.min.json
+done
