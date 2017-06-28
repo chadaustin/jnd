@@ -473,7 +473,7 @@ formats = [
         decode=ubjson.loadb),
 ]
 
-print "Format,Size,Zlib,Brotli,Zstd"
+print "Format,Uncompressed,Zlib,Brotli,Zstd"
 for format in formats:
     encoded_bytes = format.encode(json_data)
     decoded_value = format.decode(encoded_bytes)

@@ -1,4 +1,4 @@
-Format,Size,Zlib,Brotli,Zstd
+Format,Uncompressed,Zlib,Brotli,Zstd
 JND,129094,54650,46523,60231
 JSON,562408,46052,33713,44488
 MsgPack,402989,45728,34496,45810
