@@ -40,6 +40,27 @@
 
 # arrays and objects are followed by N entries of <value index> size, each referencing an element in the value table
 
+# possible CBOR-style sketch
+
+# 000 special
+#     00000 - null
+#     00001 - false
+#     00002 - true
+#     00003 - IEEE half-precision float
+#     00004 - IEEE single-precision float
+#     00005 - IEEE double-precision float
+# 001 int
+#     nnnnn
+# 010 negative int
+#     nnnnn
+# 011 string
+#     nnnnn
+# 100 array
+#     0xxyy - short array, x elements, y width
+#     1xxyy [sizetag x] - long array, y width
+# 101 object
+#     0xxyy - 
+
 import ctypes
 import functools
 import sys
